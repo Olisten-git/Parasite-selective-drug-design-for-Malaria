@@ -1,0 +1,74 @@
+MODIFIED ADP LIGANDS FOR 3K60 (PARASITE PROTEIN) - STRATEGY NOTES
+=================================================================
+Goal: parasite-selective ADP analogues through conformational restriction.
+
+
+STRATEGY 1 - Methanocarba sugar
+-------------------------------
+- The ribose ring oxygen is replaced by a carbon carrying a cyclopropane,
+  so the sugar becomes a carbocycle.
+- The 2'- and 3'-OH groups, the adenine and the 5'-diphosphate are unchanged.
+- Idea: lock the sugar pucker, as methanocarba nucleosides do, and remove the
+  ring O so the sugar cannot flip between conformations.
+- Caveat: in the file the cyclopropane is spiro to the five-membered ring
+  (a spiro[2.4] system). A classic methanocarba is fused (bicyclo[3.1.0]).
+
+STRATEGY 2 - Macrocyclic tether
+-------------------------------
+- A 3-carbon (propyl) chain links C8 of adenine to the terminal beta-phosphate
+  oxygen, closing a macrocycle.
+- This pins the base-to-phosphate geometry and the glycosidic (syn/anti)
+  orientation. It has the shortest base-to-phosphate distances in the set
+  (4.3-7.0 A).
+- The terminal phosphate is now esterified, so it can no longer behave like a
+  free ADP phosphate.
+
+
+STRATEGY 3 - Rigid phosphate isostere
+-------------------------------------
+- The bridging P-O-P oxygen is replaced by a vinylene (-CH=CH-), giving a
+  P-CH=CH-P bisphosphonate.
+- This removes the flexible pyrophosphate hinge and makes the molecule
+  non-hydrolysable.
+
+
+STRATEGY 4 - Bulky C8 bromine
+-----------------------------
+- This is 8-bromo-ADP, with the ribose and diphosphate untouched.
+- The bulky Br at C8 clashes with the sugar and pushes the base into the syn
+  conformation around the glycosidic bond.
+- Selectivity argument: if the parasite pocket accepts syn and the host
+  pocket prefers anti, the host binds worse.
+
+
+STRATEGY 5 - Core only
+----------------------
+- The adenine 6-NH2 is replaced by Cl, giving a 6-chloropurine.
+- The base carries an N7 4-(aminomethyl)benzyl substituent, and C8 is a
+  saturated CH2.
+- The ribose and the diphosphate are intact.
+- "Core only" was read as the scaffold plus the benzyl substituent, with no
+  linker lock. This is a guess; correct if it meant something else.
+- The 7,8-dihydro, N7-benzyl pattern is unusual. It may be a bond-order
+  artifact from how the structure was built, so check it.
+
+
+STRATEGY 6 - Locked linker
+--------------------------
+- Same base as Strategy 5 (6-Cl, N7-aminomethylbenzyl, saturated C8).
+- The ribose is replaced by a bridged bicyclic sugar, a
+  2,5-dioxabicyclo[2.2.1]heptane, so the sugar is locked.
+- It has no free 2'/3'-OH groups.
+- The 5'-diphosphate is still attached.
+
+
+ACROSS THE SET
+--------------
+- Strategies 1-4 are conformer ensembles (23, 23, 17 and 37 conformers) with
+  a Base_to_Phosphate_Distance property.
+- Range of that distance (min-max, spread):
+    S1: 5.09-8.50 A (3.4 A)
+    S2: 4.32-6.98 A (2.7 A)   <- most restricted
+    S3: 4.41-8.43 A (4.0 A)   <- least restricted
+    S4: 4.93-8.48 A (3.6 A)
+- Strategies 5 and 6 are single conformers with no distance data.
